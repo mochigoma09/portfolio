@@ -803,3 +803,33 @@ p.capitalize:first-letter {
 .credits {
   color: #999;
 }
+
+.profile{
+  font-size: 20px;
+}
+
+.profile table th{
+  padding: 10px;
+  text-align: center;
+}
+
+#headerwrap p{
+  color: #ffffff;
+}
+
+#works table{
+  margin: 25px auto;
+}
+
+#works table th{
+  text-align: right;
+  padding: 5px;
+}
+
+#works table td{
+  text-align: left;
+}
+
+#sns i{
+  padding: 30px;
+}
