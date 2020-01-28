@@ -810,3 +810,30 @@ p.capitalize:first-letter {
 #sns i {
   padding: 30px;
 }
+
+.title {
+  background-size: 100%!important;
+  height: 200px;
+  padding-top: 50px;
+  color: #ffffff;
+}
+
+.title h3{
+  color: #ffffff!important;
+}
+
+#skill .title {
+  background: url(../img/bg02.jpg) no-repeat center;
+}
+
+#works .title {
+  background: url(../img/bg03.jpg) no-repeat center;
+}
+
+#contactus .title {
+  background: url(../img/bg04.jpg) no-repeat center;
+}
+
+#sns .title {
+  background: url(../img/bg05.jpg) no-repeat center;
+}
