@@ -12,6 +12,9 @@
   <link href="img/favicon.png" rel="icon" />
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
 
+  <!-- Reset CSS File -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet" />
 
@@ -36,292 +39,36 @@
 </head>
 
 <body>
-  <div id="headerwrap">
-    <div class="container">
-      <div class="row centered">
-        <div class="col-lg-8 col-lg-offset-2 mt">
-          <h1 class="animation slideDown">Portfolio</h1>
-          <p>-ポートフォリオ-</p>
-        </div>
-      </div>
-      <!-- /row -->
+  <header class="navbar-fixed-top">
+    <p class="text">
+      Portfolio
+    </p>
+    <div class="menu">
+      <button class="btn-link">ABOUT</button>
+      <button class="btn-link">SKILL</button>
+      <button class="btn-link">WORKS</button>
     </div>
-    <!-- /container -->
-  </div>
-  <!-- /headerwrap -->
-
-  <div id="about">
-    <div class="row mt centered ">
-      <div class="col-lg-4 col-lg-offset-4">
-        <h3>ABOUT</h3>
-        <p>-自己紹介-</p>
-      </div>
-    </div>
-    <!-- /row -->
-
-    <div class="container">
-      <div class="row mt">
-        <div class="col-lg-6 col-md-6 col-xs-12 desc text-right">
-          <img width="350" src="img/me.jpg" alt="me" />
-        </div>
-        <div class="profile col-lg-6 col-md-6 col-xs-12 desc">
-          <table>
-            <tbody>
-              <tr>
-                <th scope="row" class="text-align-center">
-                  <i class="fa fa-user fa-3x" aria-hidden="true"></i>
-                </th>
-                <td>もちごま</td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <i class="fa fa-birthday-cake fa-3x" aria-hidden="true"></i>
-                </th>
-                <td>
-                  1993/09/01
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  <i class="fa fa-home fa-3x" aria-hidden="true"></i>
-                </th>
-                <td>
-                  東京都
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <p>
-            高校からプログラミングを学び、
-            <br>
-            大学でも工学部でパソコンと向き合う生活を送る。
-            <br>
-            <br>
-            新卒で就職したWEB系企業を10カ月で退職し、
-            <br>
-            1カ月のニートを経て、組み込み系企業へ転職。
-            <br>
-            3年間の経験を積み、推しユニットの解散をきっかけに
-            <br>
-            現在はフリーランスで活動する。
-            <br>
-            <br>
-            趣味は写真、動画撮影。
-            <br>
-            企業のInstagramの運営や、YouTubeの動画編集も担当している。
-          </p>
-        </div>
-      </div>
-    <!-- /row -->
-    </div>
-  </div>
-  <!-- /container -->
-
-  <div id="skill">
-    <div class="row mt centered title">
-      <div class="col-lg-4 col-lg-offset-4">
-        <h3>SKILL</h3>
-        <p>-スキル-</p>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row mt">
-        <div class="col-lg-3 col-md-3 col-xs-12">
-          <div class="text-center">
-            <i class="fa fa-desktop fa-5x" aria-hidden="true"></i>
-            <h4>Web制作</h4>
-          </div>
-          <p>
-            Wordpressを使用し、レスポンシブ対応サイトを作成します。
-            <br>
-            JavaScriptのスキルもあるので、動的なサイト作りも可能です。
-            <br>
-            納品後も随時修正は受け付け致します
-          </p>
-        </div>
-        <div class="col-lg-3 col-md-3 col-xs-12">
-          <div class="text-center">
-            <i class="fa fa-camera fa-5x" aria-hidden="true"></i>
-            <h4>写真撮影</h4>
-          </div>
-          <p>
-            ポートレートから宣材写真まで
-            <br>
-            一眼レフを使用した高画質な撮影をします。
-            <br>
-            色味の修正やシワの除去などの加工も対応致します。
-          </p>
-        </div>
-        <div class="col-lg-3 col-md-3 col-xs-12">
-          <div class="text-center">
-            <i class="fa fa-video-camera fa-5x" aria-hidden="true"></i>
-            <h4>動画編集</h4>
-          </div>
-          <p>
-            記念動画やYoutuber向け動画の撮影、編集をします。
-            <br>
-            Youtubeへのアップロードも対応致します。
-          </p>
-        </div>
-        <div class="col-lg-3 col-md-3 col-xs-12">
-          <div class="text-center">
-            <i class="fa fa-lightbulb-o fa-5x" aria-hidden="true"></i>
-            <h4>業務コンサル</h4>
-          </div>
-          <p>
-            4年間、客先常駐で得た経験から
-            <br>
-            業務フローをヒアリングし、効率化を提案します。
-            <br>
-            必要に応じて、効率化ツールの作成も致します。
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- /container -->
-  </div>
-
-  <div id="works">
-    <div class="row mt centered title">
-      <div class="col-lg-4 col-lg-offset-4">
-        <h3>WORKS</h3>
-        <p>-実績-</p>
-      </div>
-      <!-- /col-lg-4 -->
-    </div>
-    <!-- /row -->
-    <div class="container">
-      <div class="row mt centered">
-        <div class="col-lg-4 desc">
-          <a class="b-link-fade b-animate-go" href="https://uenojoshi-tour.com/ja/" target="_blank">
-            <img width="350" src="img/portfolio/port01.jpg" alt="Web制作" />
-            <div class="b-wrapper">
-              <h4 class="b-from-left b-animate b-delay03">Web制作</h4>
-              <p class="b-from-right b-animate b-delay03">和旅合同会社 様</p>
-            </div>
-          </a>
-          <p>訪日外国人向けツアーサイトの制作、運営</p>
-          <table>
-            <tbody>
-              <tr>
-                <th scope="row">
-                  使用言語
-                </th>
-                <td>HTML, CSS, PHP, JavaScript(jQuery)</td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  使用ツール
-                </th>
-                <td>
-                  WordPress, Googleスプレッドシート
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-lg-4 desc">
-          <a class="b-link-fade b-animate-go" href="https://photos.app.goo.gl/K2LLDjXR8mGx1fzBA" target="_blank">
-            <img width="350" src="img/portfolio/port02.jpg" alt="写真撮影" />
-            <div class="b-wrapper">
-              <h4 class="b-from-left b-animate b-delay03">写真撮影</h4>
-              <p class="b-from-right b-animate b-delay03">和旅合同会社 様</p>
-            </div>
-          </a>
-          <p>宣材写真の撮影</p>
-          <table>
-            <tbody>
-              <tr>
-                <th scope="row">
-                  使用カメラ
-                </th>
-                <td>
-                  Canon EOS 7D MarkⅡ
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  使用ソフト
-                </th>
-                <td>
-                  Lightroom, Photoshop
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-lg-4 desc">
-          <a class="b-link-fade b-animate-go" href="https://www.youtube.com/channel/UCQTHgTEZApIsEnPYePATEYg/featured"
-            target="_blank"><img width="350" src="img/portfolio/port03.jpg" alt="動画編集" />
-            <div class="b-wrapper">
-              <h4 class="b-from-left b-animate b-delay03">動画編集</h4>
-              <p class="b-from-right b-animate b-delay03">和旅合同会社 様</p>
-            </div>
-          </a>
-          <p>YouTubeチャンネルの設営、動画の編集、投稿</p>
-          <table>
-            <tbody>
-              <tr>
-                <th scope="row">
-                  使用ソフト
-                </th>
-                <td>
-                  Premiere pro, After effects
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-lg-12 desc">
-          <p>その他、細々な制作物は以下で発信しています</p>
-          <p>
-            <a href="https://github.com/mochigoma09">Github</a>
-            <br>
-            <a href="https://qiita.com/mochidamochi">Qiita</a>
-            <br>
-            <a href="https://note.com/mochigoma">Note</a></p>
-        </div>
-      </div>
-      <!-- /row -->
-    </div>
-  </div>
-  <!-- /container -->
-
-  <div id="contactus">
-    <div class="row mt title">
-      <div class="col-lg-4 col-lg-offset-4 centered">
-        <h3>Contact Us</h3>
-        <p>-お問い合わせ-</p>
-      </div>
-    </div>
-    <div class="text-center container">
-      <p>TwitterまたはInstagramのDMからお願いします。</p>
-      <div class="row mt">
-        <a class="b-link-fade b-animate-go" href="https://twitter.com/mochi_goma_jpg" target="_blank">
-          <i class="fa fa-twitter fa-5x" aria-hidden="true"></i>
-        </a>
-        <a class="b-link-fade b-animate-go" href="https://www.instagram.com/photo_mo_chi/?hl=ja" target="_blank">
-          <i class="fa fa-instagram fa-5x" aria-hidden="true"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div id="copyrights">
-    <div class="container">
-      <p>&copy; Copyrights <strong>Marco</strong>. All Rights Reserved</p>
-      <div class="credits">
-        <!--
+  </header>
+  <main>
+    
+  </main>
+  <footer>
+    <div id="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights <strong>Marco</strong>. All Rights Reserved</p>
+        <div class="credits">
+          <!--
           You are NOT allowed to delete the credit link to TemplateMag with free version.
           You can delete the credit link only if you bought the pro version.
           Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/marco-bootstrap-agency-template/
           Licensing information: https://templatemag.com/license/
         -->
-        Created with Marco template by
-        <a href="https://templatemag.com/">TemplateMag</a>
+          Created with Marco template by
+          <a href="https://templatemag.com/">TemplateMag</a>
+        </div>
       </div>
     </div>
-  </div>
+  </footer>
   <!-- / copyrights -->
 
   <!-- JavaScript Libraries -->
