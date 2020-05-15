@@ -15,6 +15,8 @@ body {
   color: #555;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  padding: 60px 0 0 0;
 }
 
 /* Titles */
@@ -94,7 +96,7 @@ hr {
 /* margin top & Bottom */
 
 .mt {
-  margin-top: 50px;
+  margin-top: 80px;
   margin-bottom: 50px;
 }
 
@@ -333,6 +335,18 @@ p.capitalize:first-letter {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+#headerwrap.about {
+  background: url(../img/about.jpg) no-repeat center;
+}
+
+#headerwrap.skill {
+  background: url(../img/skill.jpg) no-repeat center;
+}
+
+#headerwrap.works {
+  background: url(../img/works.jpg) no-repeat center;
 }
 
 #headerwrap h1 {
@@ -818,7 +832,7 @@ p.capitalize:first-letter {
   color: #ffffff;
 }
 
-.title h3{
+.title h3 {
   color: #ffffff!important;
 }
 
@@ -832,4 +846,64 @@ p.capitalize:first-letter {
 
 #contactus .title {
   background: url(../img/bg04.jpg) no-repeat center;
+}
+
+header {
+  height: 60px;
+  background-color: #ffffff;
+}
+
+header .menu {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
+
+header .text {
+  padding: 16px 0 0 16px;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.more button {
+  width: 120px;
+  color: #fff;
+  background-color: #74c9be;
+  border-color: #74c9be;
+}
+
+.more button:hover {
+  color: #fff;
+  background-color: #5a9e95;
+  border-color: #5a9e95;
+}
+
+*:hover {
+  transition: 0.5s;
+}
+
+.contents {
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 450px;
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.left {
+  text-align: left;
+}
+
+ul.work {
+  max-width: 300px;
+  margin: auto;
+  list-style-type: circle;
+  padding: 24px 0 40px 0 ;
+}
+
+.bottom-work{
+  padding-bottom: 40px;
 }
