@@ -1,8 +1,13 @@
+let BLOCK_PARAM = {
+  message: '',
+  css: {}
+};
+
 jQuery(document).ready(function ($) {
   let main = $('main');
-  init();
+  initPage();
 
-  function initAnimate(){
+  function initAnimate() {
     setTimeout(function () {
       $('.b-animate-go .b-wrapper').each(function (i, v) {
         var this_h = $(v).height();
@@ -22,14 +27,21 @@ jQuery(document).ready(function ($) {
         var set_mar = parseInt((this_h / 2) - ((m_t + m_b + el_h) / 2));
         $(v).children().first().css('margin-top', set_mar);
       });
-    },10);
+    }, 10);
   }
 
-  function init() {
+  function initPage(pageName) {
+    $('body').unblock({
+      fadeOut: 0
+    }).block(BLOCK_PARAM);
+    if (!pageName) {
+      pageName = 'top';
+    }
     main.empty();
-    main.load('part/top.html', function () {
+    main.load('part/' + pageName + '.html', function () {
       initAnimate();
     });
+    $('body').unblock();
   };
 
   $(window).scroll(function () {
@@ -44,22 +56,15 @@ jQuery(document).ready(function ($) {
   });
 
   $(document).on('click', 'header .text', function () {
-    init();
+    initPage();
   });
 
   $(document).on('click', '.btn-link', function () {
-    let target = $(this).text().toLowerCase();
-    main.empty();
-    main.load('part/' + target + '.html', function () {
-      initAnimate();
-    });
+    initPage($(this).text().toLowerCase());
+
   });
 
   $(document).on('click', '.more button', function () {
-    let target = $(this).val();
-    main.empty();
-    main.load('part/' + target + '.html', function () {
-      initAnimate();
-    });
+    initPage($(this).val());
   });
 });
