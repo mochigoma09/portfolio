@@ -2,84 +2,294 @@
 <html lang="ja">
 
 <head>
-  <meta charset="utf-8" />
-  <title>ごまのポートフォリオ</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <meta content="" name="keywords" />
-  <meta content="" name="description" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GOMA's LAB | Masahiro Goto Portfolio</title>
+	<style>
+		/* Base Styles */
+		:root {
+			--primary-color: #333;
+			--accent-color: #d4a373;
+			/* カフェラテのような落ち着いた色 */
+			--bg-color: #f9f9f9;
+			--text-color: #444;
+			--white: #ffffff;
+		}
 
-  <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon" />
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+		body {
+			font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+			margin: 0;
+			padding: 0;
+			color: var(--text-color);
+			background-color: var(--bg-color);
+			line-height: 1.6;
+		}
 
-  <!-- Reset CSS File -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
+		a {
+			text-decoration: none;
+			color: inherit;
+			transition: 0.3s;
+		}
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet" />
+		ul {
+			list-style: none;
+			padding: 0;
+		}
 
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		/* Header */
+		header {
+			background: var(--white);
+			padding: 20px 40px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+			position: sticky;
+			top: 0;
+			z-index: 100;
+		}
 
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-  <link href="lib/animations/animations.css" rel="stylesheet" />
-  <link href="lib/hover-pack/hover-pack.css" rel="stylesheet" />
+		.logo {
+			font-size: 1.5rem;
+			font-weight: bold;
+			letter-spacing: 1px;
+		}
 
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet" />
-  <link href="css/colors/color-74c9be.css" rel="stylesheet" />
+		.logo span {
+			color: var(--accent-color);
+		}
 
-  <!-- =======================================================
-    Template Name: Marco
-    Template URL: https://templatemag.com/marco-bootstrap-agency-template/
-    Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
+		/* Hero Section */
+		.hero {
+			background: var(--white);
+			padding: 100px 20px;
+			text-align: center;
+			border-bottom: 1px solid #eee;
+		}
+
+		.hero h1 {
+			font-size: 3rem;
+			margin-bottom: 10px;
+			letter-spacing: 2px;
+		}
+
+		.hero p {
+			font-size: 1.2rem;
+			color: #888;
+			margin-bottom: 30px;
+		}
+
+		/* Container */
+		.container {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 60px 20px;
+		}
+
+		/* Section Titles */
+		h2.section-title {
+			text-align: center;
+			font-size: 2rem;
+			margin-bottom: 40px;
+			position: relative;
+			display: inline-block;
+			width: 100%;
+		}
+
+		h2.section-title::after {
+			content: "";
+			display: block;
+			width: 50px;
+			height: 3px;
+			background: var(--accent-color);
+			margin: 10px auto 0;
+		}
+
+		/* Featured App (Card Style) */
+		.featured-app {
+			background: var(--white);
+			border-radius: 12px;
+			overflow: hidden;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 60px;
+		}
+
+		.app-image {
+			flex: 1;
+			min-width: 300px;
+			background-color: #eee;
+			/* ここにご自身の写真やアプリのスクショを入れると良いです */
+			background-image: url('./sweets-palette/assets/top-COhXmizV.png');
+			background-size: cover;
+			background-position: center;
+			min-height: 300px;
+		}
+
+		.app-content {
+			flex: 1;
+			padding: 40px;
+			min-width: 300px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.tag {
+			display: inline-block;
+			background: var(--accent-color);
+			color: var(--white);
+			padding: 4px 12px;
+			border-radius: 20px;
+			font-size: 0.8rem;
+			margin-bottom: 15px;
+			width: fit-content;
+		}
+
+		.app-content h3 {
+			font-size: 1.8rem;
+			margin: 0 0 15px;
+		}
+
+		.app-content p {
+			margin-bottom: 25px;
+			color: #666;
+		}
+
+		.btn {
+			display: inline-block;
+			background: var(--primary-color);
+			color: var(--white);
+			padding: 12px 30px;
+			border-radius: 6px;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		.btn:hover {
+			background: var(--accent-color);
+		}
+
+		/* About Section */
+		.about-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 30px;
+		}
+
+		.about-card {
+			background: var(--white);
+			padding: 30px;
+			border-radius: 8px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+		}
+
+		.about-card h3 {
+			border-bottom: 1px solid #eee;
+			padding-bottom: 10px;
+			margin-bottom: 15px;
+		}
+
+		/* Footer */
+		footer {
+			background: #333;
+			color: #ccc;
+			padding: 40px 20px;
+			text-align: center;
+			font-size: 0.9rem;
+		}
+
+		footer a {
+			color: #fff;
+			margin: 0 10px;
+		}
+
+		footer a:hover {
+			text-decoration: underline;
+		}
+
+		/* Responsive */
+		@media (max-width: 768px) {
+			.hero h1 {
+				font-size: 2rem;
+			}
+
+			.app-content {
+				padding: 25px;
+			}
+		}
+	</style>
 </head>
 
 <body>
-  <header class="navbar-fixed-top">
-    <p class="text">
-      Portfolio
-    </p>
-    <div class="menu">
-      <button class="btn-link">ABOUT</button>
-      <button class="btn-link">SKILL</button>
-      <button class="btn-link">WORKS</button>
-    </div>
-  </header>
-  <main>
 
-  </main>
-  <footer>
-    <div id="copyrights">
-      <div class="container">
-        <p>&copy; Copyrights <strong>Marco</strong>. All Rights Reserved</p>
-        <div class="credits">
-          <!--
-          You are NOT allowed to delete the credit link to TemplateMag with free version.
-          You can delete the credit link only if you bought the pro version.
-          Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/marco-bootstrap-agency-template/
-          Licensing information: https://templatemag.com/license/
-        -->
-          Created with Marco template by
-          <a href="https://templatemag.com/">TemplateMag</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- / copyrights -->
+	<header>
+		<div class="logo">GOMA's <span>LAB</span></div>
+	</header>
 
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/php-mail-form/validate.js"></script>
-  <script src="lib/hover-pack/hover-pack.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js"></script>
+	<section class="hero">
+		<h1>Engineering & Creative</h1>
+		<p>Masahiro Goto Portfolio / Web Apps</p>
+	</section>
 
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+	<main class="container">
+
+		<h2 class="section-title">Projects</h2>
+		<div class="featured-app">
+			<div class="app-image">
+			</div>
+			<div class="app-content">
+				<span class="tag">Laravel / AI Logic</span>
+				<h3>Sweets Palette</h3>
+				<p><strong>「その診断に、論理はあるか？」</strong></p>
+				<p>MBTIやLOVE Typeなど、溢れる診断ツールの中で「確かな納得感」を追求。GoogleのAI（Gemini）を介し、心理学的整合性を徹底的にチューニングした次世代の16タイプ診断です。</p>
+				<p>エンジニアとしての論理的アプローチと、カメラマンとして個性を切り取ってきた感性を融合。あなたの深層心理を「スイーツ」という形で美しく、正確に描き出します。</p>
+				<a href="/sweets-palette/" class="btn">診断をはじめる</a>
+			</div>
+		</div>
+		<div class="featured-app" style="margin-top: 40px;">
+			<div class="app-image" style="background-image: url('./aquratum/hero-bg.png');">
+			</div>
+			<div class="app-content">
+				<span class="tag">Vue.js 3 / Tailwind CSS</span>
+				<h3>Aquratum Official Website Project</h3>
+				<p><strong>「160万年前の地層と深層地下水」をコードで表現する</strong></p>
+				<p>地元・東京都昭島市発の架空アイドルグループ「Aquratum」の公式サイト。Geminiを活用した独自の世界観構築と、最新のWeb技術を融合させたコンセプト実証プロジェクトです。</p>
+				<p>Vue 3のComposition APIを用いたリアクティブなUI、Tailwind
+					CSSによるグラスモーフィズム、そしてモバイルアクセスが9割を超えるアイドルファン層を想定した超・垂直統合型モバイルファースト設計を実装。単なるデザインに留まらず、予約導線の最適化までをシミュレートしています。
+				</p>
+				<a href="/aquratum/" class="btn">プロジェクトを見る</a>
+			</div>
+		</div>
+
+		<section id="about">
+			<h2 class="section-title">About Me</h2>
+			<div class="about-grid">
+				<div class="about-card">
+					<h3>Profile</h3>
+					<p><strong>後藤 将宏 (Goma-chan)</strong></p>
+					<p>東京都世田谷区在住。</p>
+					<p>WebエンジニアとしてSI/SES業界で活動する傍ら、個人開発やカメラマン（ポートレート・コスプレ）としても活動中。</p>
+				</div>
+				<div class="about-card">
+					<h3>Skills</h3>
+					<p><strong>Engineering:</strong> PHP, Laravel, HTML/CSS, JavaScript, SQL</p>
+					<p><strong>Creative:</strong> Photography, Retouching</p>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer>
+		<p>
+			<a href="/privacy-policy.html">プライバシーポリシー</a> |
+			<a href="/contact.html">お問い合わせ</a>
+		</p>
+		<p>&copy; 2025 Masahiro Goto. All Rights Reserved.</p>
+	</footer>
+
 </body>
 
 </html>
